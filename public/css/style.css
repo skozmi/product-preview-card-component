@@ -1,0 +1,26 @@
+body {
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*heading image*/
+#productImgDesktop,
+#productImgMobile {
+    width: 100%;
+    /* opacity: 0.8;
+    mix-blend-mode: multiply;
+    border-radius: 0 5px 5px 0; */
+}
+
+#productImgMobile {
+    display: none;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
