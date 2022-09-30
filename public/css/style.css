@@ -1,19 +1,56 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body, h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+/* Make images easier to work with */
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
 body {
-    font-family: 'Fraunces', serif;
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: hsl(30, 38%, 92%);
 }
 
-/*heading image*/
-#productImgDesktop,
-#productImgMobile {
-    width: 100%;
-    /* opacity: 0.8;
-    mix-blend-mode: multiply;
-    border-radius: 0 5px 5px 0; */
+/*containers*/
+.container-fluid {
+    padding: 10% 30%;
 }
 
-#productImgMobile {
-    display: none;
+.image-container, .text-container {
+    padding: 0;
+}
+
+.text-container {
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 10px 10px 0;
+}
+
+.card {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-div {
+    align-items: center;
 }
 
 .attribution {
@@ -23,4 +60,106 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/*headings and paragraphs*/
+h1 {
+    font-size: 1.7rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+p {
+    color: hsl(228, 12%, 48%);
+}
+
+.bold-sum {
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.stroke-sum {
+    font-family: 'Fraunces', serif;
+    text-decoration: line-through;
+}
+
+/*image*/
+#productImgDesktop {
+    border-radius: 10px 0 0 10px;
+}
+
+#productImgMobile {
+    display: none;
+    border-radius: 10px 10px 0 0;
+}
+
+/*button*/
+.cart-btn {
+    background: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    width: 100%;
+}
+
+.cart-btn:hover {
+    background: hsl(158, 36%, 22%);
+    color: hsl(0, 0%, 100%);
+}
+
+/*Large Desktop*/
+@media only screen and (max-width: 1236px) {
+    .container-fluid {
+            padding: 10% 25%;
+    }
+}
+
+/*Small desktop - laptop*/
+@media only screen and (max-width: 1024px) {
+    .container-fluid {
+        padding: 8% 18%;
+        font-size: 13px;
+    }
+}
+
+/*ipas and tablets*/
+@media only screen and (max-width: 767px) {
+    .container-fluid {
+        padding: 6% 15%;    
+    }
+
+    .text-container {
+        border-radius: 0 0 10px 10px;
+    }
+    
+    #productImgDesktop {
+        display: none;
+    }
+
+    #productImgMobile {
+        display: block;
+    }
+}
+
+/*mobile*/
+@media only screen and (max-width: 480px) {
+    .container-fluid {
+        padding: 3% 10%;
+        font-size: 12px;
+    }
+
+    .cart-btn {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media only screen and (max-width: 285px) {
+    .container-fluid {
+        font-size: 10px;
+    }
+
+    .bold-sum {
+        font-size: 1rem;
+    }
 }
