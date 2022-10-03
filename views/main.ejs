@@ -1,5 +1,10 @@
 <%- include('partials/header'); -%>
-
+<header>
+    <form action="/clear" method="post">
+        <p><%= selectSum %> <i class="fa-solid fa-cart-shopping"></i></p>
+        <button type="submit" class="clear-btn">Clear</button>
+    </form>
+</header>
 <main>
     <div class="row">
         <div class="col-md-6 image-container">
@@ -7,27 +12,29 @@
             <img src="public/images/image-product-mobile.jpg" id="productImgMobile" alt="image-product-mobile" />
         </div>
         <div class="col-md-6 text-container">
-            <div class="card">
-                <div class="card-body">
-                    <p class="card-text">PERFUME</p>
-                    <h1 class="card-title">Gabrielle Essence Eau De Parfum</h1>
-                    <p class="card-text"> A floral, solar and voluptuous interpretation composed by Olivier Polge,
-                    Perfumer-Creator for the House of CHANEL.</p>
-                </div>
-                <div class="card-body">
-                    <div class="row price-div">
-                        <div class="col-6">
-                            <p class="bold-sum">$149.99</p>
-                        </div>
-                        <div class="col-6">
-                            <p class="stroke-sum">$169.99</p>
+            <form action="/" method="post">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">PERFUME</p>
+                        <h1 class="card-title">Gabrielle Essence Eau De Parfum</h1>
+                        <p class="card-text"> A floral, solar and voluptuous interpretation composed by Olivier Polge,
+                            Perfumer-Creator for the House of CHANEL.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row price-div">
+                            <div class="col-6">
+                                <p class="bold-sum">$149.99</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="stroke-sum">$169.99</p>
+                            </div>
                         </div>
                     </div>
+                    <div class="card-body button-div">
+                        <button type="submit" class="btn btn-lg cart-btn">Add to Cart</button>
+                    </div>
                 </div>
-                <div class="card-body button-div">
-                    <button type="button" class="btn btn-lg cart-btn">Add to Cart</button>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
     

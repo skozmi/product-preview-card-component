@@ -62,6 +62,19 @@ body {
     color: hsl(228, 45%, 44%);
 }
 
+/*shop cart*/
+header {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.clear-btn {
+    background-color: hsl(30, 38%, 92%);
+    border: none;
+    text-decoration: underline;
+    color: hsl(228, 12%, 48%);
+}
+
 /*headings and paragraphs*/
 h1 {
     font-size: 1.7rem;
@@ -95,7 +108,7 @@ p {
     border-radius: 10px 10px 0 0;
 }
 
-/*button*/
+/*cart button*/
 .cart-btn {
     background: hsl(158, 36%, 37%);
     color: hsl(0, 0%, 100%);

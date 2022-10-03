@@ -11,7 +11,16 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res, next)=>{
-    res.render('main');
+    res.render('main', {selectSum: '$0.00'});
+});
+
+app.post('/', (req, res, next)=>{
+    let suma = '$149.99';
+    res.render('main', {selectSum: suma})
+});
+
+app.post('/clear', (req, res, next)=>{
+    res.render('main', {selectSum: '$0.00'});
 });
 
 app.listen(PORT, ()=> {
