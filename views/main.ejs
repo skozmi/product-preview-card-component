@@ -8,15 +8,17 @@
 <main>
     <div class="row">
         <div class="col-md-6 image-container">
-            <img src="public/images/image-product-desktop.jpg" id="productImgDesktop" alt="image-product-desktop">
-            <img src="public/images/image-product-mobile.jpg" id="productImgMobile" alt="image-product-mobile">
+            <picture>
+                <source media="(max-width:650px)" srcset="public/images/image-product-mobile.jpg">
+                <img src="public/images/image-product-desktop.jpg" alt="Gabrielle Parfum" style="width:auto;" class="image-product">
+            </picture>
         </div>
         <div class="col-md-6 text-container">
             <form action="/" method="post">
                 <div class="card">
                     <div class="card-body">
                         <p class="card-text">PERFUME</p>
-                        <h1 class="card-title">Gabrielle Essence Eau De Parfum</h1>
+                        <h1 class="card-title big-heading">Gabrielle Essence Eau De Parfum</h1>
                         <p class="card-text"> A floral, solar and voluptuous interpretation composed by Olivier Polge,
                             Perfumer-Creator for the House of CHANEL.</p>
                     </div>
@@ -31,7 +33,7 @@
                         </div>
                     </div>
                     <div class="card-body button-div">
-                        <button type="submit" class="btn btn-lg cart-btn">Add to Cart</button>
+                        <button type="submit" class="btn btn-lg cart-btn"><img src="public/images/icon-cart.svg" alt="icon-cart" style="width:auto;" class="icon-cart"> Add to Cart</button>
                     </div>
                 </div>
             </form>
